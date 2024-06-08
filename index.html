@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>موقعي الاحترافي</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>موقعي الاحترافي</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">الرئيسية</a></li>
+                    <li><a href="#about">حول</a></li>
+                    <li><a href="#services">خدمات</a></li>
+                    <li><a href="#contact">اتصل بنا</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div id="home" class="container">
+            <h2>مرحبًا بكم في موقعي الاحترافي</h2>
+            <p>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها التطبيق.</p>
+        </div>
+
+        <div id="about" class="container">
+            <h2>حول</h2>
+            <p>معلومات حول الموقع...</p>
+        </div>
+
+        <div id="services" class="container">
+            <h2>خدمات</h2>
+            <p>معلومات حول الخدمات المقدمة...</p>
+        </div>
+
+        <div id="contact" class="container">
+            <h2>اتصل بنا</h2>
+            <p>معلومات الاتصال...</p>
+        </div>
+
+        <!-- إضافة الأقسام الجديدة هنا -->
+        <section id="carousel" class="carousel">
+            <div class="carousel-slide active">
+                <img src="image1.jpg" alt="صورة 1">
+            </div>
+            <div class="carousel-slide">
+                <img src="image2.jpg" alt="صورة 2">
+            </div>
+            <div class="carousel-slide">
+                <img src="image3.jpg" alt="صورة 3">
+            </div>
+            <a class="carousel-prev" onclick="prevSlide()">&#10094;</a>
+            <a class="carousel-next" onclick="nextSlide()">&#10095;</a>
+        </section>
+
+        <section id="testimonials">
+            <div class="container">
+                <h2>آراء العملاء</h2>
+                <div class="testimonial">
+                    <p>"خدمة رائعة وسريعة. أنصح بها بشدة!"</p>
+                    <h3>- أحمد علي</h3>
+                </div>
+                <div class="testimonial">
+                    <p>"منتجات عالية الجودة وأسعار ممتازة."</p>
+                    <h3>- سارة محمد</h3>
+                </div>
+                <div class="testimonial">
+                    <p>"تجربة تسوق ممتعة وفريق دعم رائع."</p>
+                    <h3>- يوسف عمر</h3>
+                </div>
+            </div>
+        </section>
+
+        <section id="team">
+            <div class="container">
+                <h2>فريق العمل</h2>
+                <div class="team-member">
+                    <img src="team1.jpg" alt="عضو فريق">
+                    <h3>محمد عبد الله</h3>
+                    <p>المدير التنفيذي</p>
+                </div>
+                <div class="team-member">
+                    <img src="team2.jpg" alt="عضو فريق">
+                    <h3>علي يوسف</h3>
+                    <p>مدير التسويق</p>
+                </div>
+                <div class="team-member">
+                    <img src="team3.jpg" alt="عضو فريق">
+                    <h3>فاطمة أحمد</h3>
+                    <p>مصممة جرافيك</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="blog">
+            <div class="container">
+                <h2>المدونة</h2>
+                <div class="blog-post">
+                    <h3>عنوان المقال 1</h3>
+                    <p>مقدمة قصيرة للمقال...</p>
+                    <a href="#" class="read-more">اقرأ المزيد</a>
+                </div>
+                <div class="blog-post">
+                    <h3>عنوان المقال 2</h3>
+                    <p>مقدمة قصيرة للمقال...</p>
+                    <a href="#" class="read-more">اقرأ المزيد</a>
+                </div>
+                <div class="blog-post">
+                    <h3>عنوان المقال 3</h3>
+                    <p>مقدمة قصيرة للمقال...</p>
+                    <a href="#" class="read-more">اقرأ المزيد</a>
+                </div>
+            </div>
+        </section>
+
+        <div id="social-media">
+            <a href="https://facebook.com" target="_blank" class="social-icon"><img src="facebook-icon.png" alt="Facebook"></a>
+            <a href="https://twitter.com" target="_blank" class="social-icon"><img src="twitter-icon.png" alt="Twitter"></a>
+            <a href="https://instagram.com" target="_blank" class="social-icon"><img src="instagram-icon.png" alt="Instagram"></a>
+            <a href="https://linkedin.com" target="_blank" class="social-icon"><img src="linkedin-icon.png" alt="LinkedIn"></a>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 موقعي الاحترافي. جميع الحقوق محفوظة.</p>
+        </div>
+    </footer>
+
+    <!-- إضافة JavaScript للتمرير -->
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+
+    <!-- JavaScript الخاص بشريط التمرير -->
+    <script>
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            let slides = document.getElementsByClassName("carousel-slide");
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].classList.remove("active");
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) { slideIndex = 1 }
+            slides[slideIndex-1].classList.add("active");
+            setTimeout(showSlides, 3000); // Change image every 3 seconds
+        }
+
+        function prevSlide() {
+            let slides = document.getElementsByClassName("carousel-slide");
+            slides[slideIndex-1].classList.remove("active");
+            slideIndex--;
+            if (slideIndex < 1) { slideIndex = slides.length }
+            slides[slideIndex-1].classList.add("active");
+        }
+
+        function nextSlide() {
+            let slides = document.getElementsByClassName("carousel-slide");
+            slides[slideIndex-1].classList.remove("active");
+            slideIndex++;
+            if (slideIndex > slides.length) { slideIndex = 1 }
+            slides[slideIndex-1].classList.add("active");
+        }
+    </script>
+</body>
+</html>
+
